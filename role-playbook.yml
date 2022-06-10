@@ -1,0 +1,26 @@
+---
+- name: manage webserver
+  hosts: jenkins
+  gather_facts: false
+  remote_user: ubuntu
+  become: true
+
+  roles:
+    - webserver
+
+- name: manage users
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  become: true
+    #vars:
+    #user-name: duongle
+    #tasks:
+    #- name: create and manage users
+    # user:
+    #   name: "{{ user_name }}"
+    #   state: present
+
+
+
+
