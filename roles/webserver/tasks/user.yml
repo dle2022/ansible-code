@@ -1,4 +1,4 @@
 -name: create and mange users
-user:
-  name: "{{ user_name}}"
-  state: present
+ user:
+    name: "{{ user_name}}"
+    state: present
